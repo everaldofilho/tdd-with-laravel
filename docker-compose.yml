@@ -1,0 +1,29 @@
+version: "3"
+services:
+  tdd.app:
+    build:
+      context: .
+    container_name: tdd.app
+    volumes:
+      - ./app:/app
+    ports:
+      - 8067:80
+    links:
+      - tdd.mysql
+
+  tdd.mysql:
+    build:
+      context: ./docker-config/mysql/
+    container_name: tdd.mysql
+    ports:
+      - "3106:3306"
+    environment:
+      - MYSQL_DATABASE=laravel
+      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=secret
+
+networks:
+  default:
+    external: 
+      name: Criativoweb
