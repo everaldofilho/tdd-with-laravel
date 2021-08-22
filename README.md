@@ -8,7 +8,7 @@ Este projeto tem como objetivo de simplemente colocar em prática o USO de TDD.
 ````
 - docker-config/
     - ...
-- source/ 
+- app/ 
     - src/
     - tests/
 - Dockerfile
