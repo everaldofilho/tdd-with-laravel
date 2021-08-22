@@ -1,4 +1,5 @@
 setup:
+	docker network create Criativoweb
 	docker-compose up -d --build --force-recreate
 	docker-compose exec tdd.app composer install
 	sleep 10
