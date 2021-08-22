@@ -16,5 +16,5 @@ jobs:
     - name: Build Image
       run: make setup
       
-    - name: Execute tests (Unit and Feature tests) via PHPUnit
+    - name: Execute tests (Unit and Feature tests) via
       run: make test
