@@ -7,4 +7,4 @@ setup:
 migrate:
 	docker-compose exec -T tdd.app php artisan migrate
 test:
-	docker-compose exec -T tdd.app ./vendor/bin/phpunit --testdox
+	docker-compose exec -T tdd.app ./vendor/bin/phpunit --colors --testdox
