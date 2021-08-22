@@ -3,8 +3,8 @@ setup:
 	docker-compose up -d --build --force-recreate
 	docker-compose exec -T tdd.app composer install
 	cp ./app/.env.example ./app/.env
-	sleep 10
-	docker-compose exec -T tdd.app php artisan migrate -n
 
+migrate:
+	docker-compose exec -T tdd.app php artisan migrate
 test:
 	docker-compose exec -T tdd.app ./vendor/bin/phpunit --testdox
