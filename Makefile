@@ -7,4 +7,4 @@ setup:
 
 test:
 	docker-compose start
-	docker-compose exec -it tdd.app ./vendor/bin/phpunit --colors --testdox
+	docker-compose exec -it tdd.app ./vendor/bin/phpunit --testdox
