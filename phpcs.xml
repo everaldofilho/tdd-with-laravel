@@ -17,14 +17,12 @@
 
     <!-- Include the whole PEAR standard -->
     <rule ref="PEAR">
-        <exclude name="PEAR"/>
+        <exclude name="PEAR" />
+        <exclude name="Squiz" />
     </rule>
 
     <rule ref="PSR1"/>
     <rule ref="PSR2"/>
-    <rule ref="PSR2.Classes.PropertyDeclaration"/>
-    <rule ref="PSR2.Methods.MethodDeclaration"/>
-    <rule ref="PSR2.Files.EndFileNewline"/>
     <rule ref="PSR12.Files.OpenTag"/>
 
     <!-- Private methods MUST not be prefixed with an underscore -->
