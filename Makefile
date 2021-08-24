@@ -9,4 +9,4 @@ migrate:
 test:
 	docker-compose exec -T tdd.app ./vendor/bin/phpunit --colors --testdox
 coverage:
-	docker-compose exec -T tdd.app ./vendor/bin/php-coveralls -v
+	cd app && ./vendor/bin/php-coveralls -v && cd -
