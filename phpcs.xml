@@ -28,18 +28,18 @@
     </rule>
 
     <!-- Include some sniffs from other standards that don't conflict with PEAR -->
-    <rule ref="Squiz.Arrays.ArrayBracketSpacing"/>
-    <rule ref="Squiz.Arrays.ArrayDeclaration"/>
-    <rule ref="Squiz.Commenting.ClosingDeclarationComment"/>
+    <!-- <rule ref="Squiz.Arrays.ArrayBracketSpacing"/> -->
+    <!-- <rule ref="Squiz.Arrays.ArrayDeclaration"/> -->
+    <!-- <rule ref="Squiz.Commenting.ClosingDeclarationComment"/> -->
     <rule ref="Squiz.ControlStructures.ControlSignature"/>
     <rule ref="Squiz.ControlStructures.ElseIfDeclaration"/>
-    <rule ref="Squiz.Commenting.BlockComment"/>
-    <rule ref="Squiz.Commenting.DocCommentAlignment"/>
-    <rule ref="Squiz.Commenting.EmptyCatchComment"/>
+    <!-- <rule ref="Squiz.Commenting.BlockComment"/> -->
+    <!-- <rule ref="Squiz.Commenting.DocCommentAlignment"/> -->
+    <!-- <rule ref="Squiz.Commenting.EmptyCatchComment"/> -->
     <rule ref="Squiz.Commenting.InlineComment"/>
     <rule ref="Squiz.Commenting.LongConditionClosingComment"/>
     <rule ref="Squiz.Commenting.PostStatementComment"/>
-    <rule ref="Squiz.Commenting.VariableComment"/>
+    <!-- <rule ref="Squiz.Commenting.VariableComment"/> -->
     <rule ref="Squiz.Formatting.OperatorBracket"/>
     <rule ref="Squiz.Functions.FunctionDeclarationArgumentSpacing"/>
     <rule ref="Squiz.Operators.ComparisonOperatorUsage"/>
