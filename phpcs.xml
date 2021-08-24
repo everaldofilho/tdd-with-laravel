@@ -17,13 +17,10 @@
 
     <!-- Include the whole PEAR standard -->
     <rule ref="PEAR">
-        <exclude name="PEAR.NamingConventions.ValidFunctionName"/>
-        <exclude name="PEAR.NamingConventions.ValidVariableName"/>
         <exclude name="PEAR"/>
-        <exclude name="PEAR.Commenting.InlineComment"/>
-        <exclude name="Squiz.WhiteSpace.MemberVarSpacing.FirstIncorrect" />
     </rule>
 
+    <rule ref="PSR2"/>
     <rule ref="PSR2.Classes.PropertyDeclaration"/>
     <rule ref="PSR2.Methods.MethodDeclaration"/>
     <rule ref="PSR2.Files.EndFileNewline"/>
