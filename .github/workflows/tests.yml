@@ -21,10 +21,7 @@ jobs:
     - name: Teste Unit
       run: make test
     - name: Upload coverage results to Coveralls
-      run: |
-        cd app
-        composer global require php-coveralls/php-coveralls
-        php-coveralls --coverage_clover=app/storage/coverage/logs/clover.xml -v
+      run: make coverage
   phpcs:
       name: PHPCS
       runs-on: ubuntu-latest
