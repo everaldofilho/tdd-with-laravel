@@ -20,6 +20,7 @@
         <exclude name="PEAR"/>
     </rule>
 
+    <rule ref="PSR1"/>
     <rule ref="PSR2"/>
     <rule ref="PSR2.Classes.PropertyDeclaration"/>
     <rule ref="PSR2.Methods.MethodDeclaration"/>
