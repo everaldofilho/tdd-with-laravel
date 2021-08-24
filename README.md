@@ -1,3 +1,5 @@
+[![Laravel](https://github.com/everaldofilho/tdd-with-laravel/actions/workflows/tests.yml/badge.svg)](https://github.com/everaldofilho/tdd-with-laravel/actions/workflows/tests.yml)
+
 # Praticando TDD com Laravel
 
 Este projeto tem como objetivo de simplemente colocar em prática o USO de TDD.
