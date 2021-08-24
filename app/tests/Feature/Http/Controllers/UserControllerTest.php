@@ -41,8 +41,7 @@ class UserControllerTest extends TestsTestCase
             ]);
     }
 
-    public function dataProviderUsers(): array
-    {
+    public function dataProviderUsers(): array {
         return [
             ['Everaldo da Costa Filho', 'Everaldo'],
             ['Lucas Almeida', 'Lucas'],
