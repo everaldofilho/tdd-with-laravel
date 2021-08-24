@@ -5,7 +5,7 @@ namespace App\Helps;
 class Alies
 {
     public static function transforme(string $name){
-        $ex = explode(' ',$name );
+        $ex = explode(' ', $name);
         foreach ($ex as $key => $value) {
             if(!empty($value)){
 
