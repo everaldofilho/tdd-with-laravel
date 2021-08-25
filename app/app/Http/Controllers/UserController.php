@@ -3,16 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Helps\Alies;
+use App\Support\Alies;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-   
-
     /**
-     * Display the specified resource.
-     *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
@@ -26,7 +22,7 @@ class UserController extends Controller
         return response()->json([
             'id' => $user->id,
             'name' => $user->name,
-            'alias' => Alies::transforme($user->name)
+            'alias' => Alies::transforme($user->name) 
         ]);
     }
 

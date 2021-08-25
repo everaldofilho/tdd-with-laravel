@@ -22,3 +22,8 @@ Linguagem: PHP 7.4
 Framework: Laravel
 
 Banco: Mysql
+
+## Referencia
+````
+https://sunny-selenium-5ba.notion.site/TDD-Test-Driven-Development-5db7422c4930442a8e1c580106b9933e
+````
