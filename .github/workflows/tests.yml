@@ -35,7 +35,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        
+
       - name: Switch to PHP 7.3
         if: ${{ success() && matrix.php != '7.3' }}
         uses: shivammathur/setup-php@v2
@@ -45,7 +45,7 @@ jobs:
 
       - name: Install Coveralls
         if: ${{ success() }}
-        run: composer require --global php-coveralls/php-coveralls:"^2.4.2"
+        run: composer  global require php-coveralls/php-coveralls:"^2.4.2"
 
       - name: Upload coverage results to Coveralls
         if: ${{ success() }}
