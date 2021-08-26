@@ -8,6 +8,3 @@ migrate:
 	docker-compose exec -T tdd.app php artisan migrate
 test:
 	docker-compose exec -T tdd.app ./vendor/bin/phpunit --colors --testdox
-coverage:
-	docker-compose exec -T tdd.app chmod 777 -R .
-	cd app && ./vendor/bin/php-coveralls -v && cd -

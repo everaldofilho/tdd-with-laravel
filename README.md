@@ -1,4 +1,5 @@
 [![Laravel](https://github.com/everaldofilho/tdd-with-laravel/actions/workflows/tests.yml/badge.svg)](https://github.com/everaldofilho/tdd-with-laravel/actions/workflows/tests.yml)
+[![codecov](https://codecov.io/gh/everaldofilho/tdd-with-laravel/branch/main/graph/badge.svg)](https://codecov.io/gh/everaldofilho/tdd-with-laravel)
 
 # Praticando TDD com Laravel
 
