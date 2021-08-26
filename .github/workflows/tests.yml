@@ -25,6 +25,7 @@ jobs:
       uses: coverallsapp/github-action@1.1.3
       with:
         github-token: ${{ secrets.github_token }}
+        path-to-lcov: ./app/build/clover.xml
 
     - name: Upload coverage results to Coveralls
       run: make coverage
