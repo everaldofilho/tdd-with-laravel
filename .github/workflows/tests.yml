@@ -38,8 +38,8 @@ jobs:
         COVERALLS_PARALLEL: true
         COVERALLS_FLAG_NAME: php-${{ matrix.php }}-phpcs-${{ matrix.phpcs_version }}
       run: |
-       chmod 777 -R app/storage/
-       ~/.composer/vendor/bin/php-coveralls -v -x app/build/logs/clover.xml -o app/storage/json.json
+       
+       ~/.composer/vendor/bin/php-coveralls -v -x app/build/logs/clover.xml -o json.json
   phpcs:
       name: PHPCS
       runs-on: ubuntu-latest
