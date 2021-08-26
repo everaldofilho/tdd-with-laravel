@@ -7,32 +7,49 @@ use Tests\TestCase as TestsTestCase;
 
 class UserControllerTest extends TestsTestCase
 {
-    public function test_should_return_code_200()
+    public function testShouldReturnCode200()
     {
         $user = User::factory()->create();
-
+ 
         $response = $this->get("/api/profile/{$user->id}");
         $response->assertStatus(200);
     }
 
-    public function test_should_return_code_404()
+    public function testShouldReturnCode404()
     {
         $response = $this->get("/api/profile/-1");
         $response->assertStatus(404);
     }
 
-    public function test_should_return_sintaxe()
+
+    /**
+     * @dataProvider dataProviderUsers
+     */
+    public function testShouldReturnSintaxe($name, $alias)
     {
         $user = User::factory()->create([
-            'name' => "Bruno Oliveira"
+            'name' => $name
         ]);
 
         $response = $this->get("/api/profile/{$user->id}");
         $response
             ->assertStatus(200)
             ->assertJson([
-                'name' => "Bruno Oliveira",
-                'alias' => "Bruno"
+                'id' => $user->id,
+                'name' => $name,
+                'alias' => $alias
             ]);
+    }
+
+    public function dataProviderUsers(): array {
+        return [
+            ['Everaldo da Costa Filho', 'Everaldo'],
+            ['Lucas Almeida', 'Lucas'],
+            ['Amanda Almeida', 'Amanda'],
+            [' Joãozinho da Silva', 'Joãozinho'],
+            [' Joãozinho  da Silva', 'Joãozinho'],
+            [' joãozinho da Silva', 'Joãozinho'],
+            [' Maria vitoria de Alencar', 'Maria Vitoria'],
+        ];
     }
 }

@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  laravel-tests:
+  tests:
 
     runs-on: ubuntu-latest
 
@@ -16,5 +16,23 @@ jobs:
     - name: Build Image
       run: make setup
       
-    - name: Execute tests (Unit and Feature tests) via
+    - name: Teste Unit
       run: make test
+
+    - uses: codecov/codecov-action@v2
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+        files: ./app/build/logs/clover.xml # optional
+        flags: test-unit # optional
+        name: codecov-umbrella # optional
+        fail_ci_if_error: true # optional (default = false)
+        verbose: true # optional (default = false)
+  phpcs:
+      name: PHPCS
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - name: PHPCS check
+          uses: chekalsky/phpcs-action@v1
+          with:
+            enable_warnings: true
