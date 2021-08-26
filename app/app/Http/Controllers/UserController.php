@@ -29,5 +29,4 @@ class UserController extends Controller
             'alias' => Alies::transforme($user->name)
         ]);
     }
-
 }

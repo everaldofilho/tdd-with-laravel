@@ -7,7 +7,7 @@ use Tests\TestCase as TestsTestCase;
 
 class UserControllerTest extends TestsTestCase
 {
-    public function test_should_return_code_200()
+    public function testShouldReturnCode200()
     {
         $user = User::factory()->create();
  
@@ -15,7 +15,7 @@ class UserControllerTest extends TestsTestCase
         $response->assertStatus(200);
     }
 
-    public function test_should_return_code_404()
+    public function testShouldReturnCode404()
     {
         $response = $this->get("/api/profile/-1");
         $response->assertStatus(404);
@@ -25,7 +25,7 @@ class UserControllerTest extends TestsTestCase
     /**
      * @dataProvider dataProviderUsers
      */
-    public function test_should_return_sintaxe($name, $alias)
+    public function testShouldReturnSintaxe($name, $alias)
     {
         $user = User::factory()->create([
             'name' => $name
@@ -41,8 +41,7 @@ class UserControllerTest extends TestsTestCase
             ]);
     }
 
-    public function dataProviderUsers(): array
-    {
+    public function dataProviderUsers(): array {
         return [
             ['Everaldo da Costa Filho', 'Everaldo'],
             ['Lucas Almeida', 'Lucas'],

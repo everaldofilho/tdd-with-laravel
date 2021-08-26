@@ -4,8 +4,10 @@ services:
     build:
       context: .
     container_name: tdd.app
+    environment:
+      COVERALLS_REPO_TOKEN: ${COVERALLS_REPO_TOKEN}
     volumes:
-      - ./app:/app
+      - ./:/app
     ports:
       - 8067:80
     links:
