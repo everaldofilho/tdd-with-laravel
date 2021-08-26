@@ -1,6 +1,5 @@
 FROM webdevops/php-nginx-dev:7.4
-ENV WEB_DOCUMENT_ROOT /app/public
+ENV WEB_DOCUMENT_ROOT /app/app/public
 ENV WEB_DOCUMENT_INDEX index.php
 ENV XDEBUG_MODE coverage
-ENV GIT_DISCOVERY_ACROSS_FILESYSTEM 0
-WORKDIR /app
+WORKDIR /app/app
