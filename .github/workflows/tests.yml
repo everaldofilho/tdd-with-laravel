@@ -53,7 +53,7 @@ jobs:
           COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           COVERALLS_PARALLEL: true
           COVERALLS_FLAG_NAME: php-${{ matrix.php }}-phpcs-${{ matrix.phpcs_version }}
-        run: vendor/bin/php-coveralls -v -x build/logs/clover.xml
+        run: ~/.composer/vendor/bin/php-coveralls -v -x build/logs/clover.xml
   phpcs:
       name: PHPCS
       runs-on: ubuntu-latest
