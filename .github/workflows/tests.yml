@@ -19,39 +19,25 @@ jobs:
     - name: Teste Unit
       run: make test
 
-    # - name: Coveralls GitHub Action
-    #   uses: coverallsapp/github-action@1.1.3
-    #   with:
-    #     github-token: ${{ secrets.github_token }}
-    #     path-to-lcov: ./app/build/logs/clover.xml
 
-    # - name: Upload coverage results to Coveralls
-    #   run: make coverage
+    - name: Switch to PHP 7.3
+      if: ${{ success() && matrix.php != '7.3' }}
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: 7.3
+        coverage: none
 
-  coverage:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Install Coveralls
+      if: ${{ success() }}
+      run: composer  global require php-coveralls/php-coveralls:"^2.4.2"
 
-      - name: Switch to PHP 7.3
-        if: ${{ success() && matrix.php != '7.3' }}
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: 7.3
-          coverage: none
-
-      - name: Install Coveralls
-        if: ${{ success() }}
-        run: composer  global require php-coveralls/php-coveralls:"^2.4.2"
-
-      - name: Upload coverage results to Coveralls
-        if: ${{ success() }}
-        env:
-          COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          COVERALLS_PARALLEL: true
-          COVERALLS_FLAG_NAME: php-${{ matrix.php }}-phpcs-${{ matrix.phpcs_version }}
-        run: ~/.composer/vendor/bin/php-coveralls -v -x app/build/logs/clover.xml
+    - name: Upload coverage results to Coveralls
+      if: ${{ success() }}
+      env:
+        COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        COVERALLS_PARALLEL: true
+        COVERALLS_FLAG_NAME: php-${{ matrix.php }}-phpcs-${{ matrix.phpcs_version }}
+      run: ~/.composer/vendor/bin/php-coveralls -v -x app/build/logs/clover.xml
   phpcs:
       name: PHPCS
       runs-on: ubuntu-latest
