@@ -17,20 +17,20 @@ class Alies
      * @param null|string $full_name
      * @return null|string
      */
-    private static function firstName(?string  $full_name): ?string
+    public static function firstName(?string  $full_name): ?string
     {
-        $first_name = trim($full_name);
+        $first_name = ucwords(trim($full_name));
         if (stristr($first_name, ' ')) {
             return stristr($first_name, ' ', true);
         }
-        return ucwords($first_name);
+        return $first_name;
     }
 
     /**
      * @param null|string $full_name
      * @return null|string
      */
-    private static function getCompoundName(?string  $full_name): ?string
+    public static function getCompoundName(?string  $full_name): ?string
     {
         $full_name = trim($full_name);
         $first_name = self::firstName($full_name);

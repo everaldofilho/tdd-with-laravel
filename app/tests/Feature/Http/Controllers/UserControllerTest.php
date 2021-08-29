@@ -10,7 +10,7 @@ class UserControllerTest extends TestsTestCase
     public function test_should_return_code_200()
     {
         $user = User::factory()->create();
- 
+
         $response = $this->get("/api/profile/{$user->id}");
         $response->assertStatus(200);
     }
@@ -51,6 +51,15 @@ class UserControllerTest extends TestsTestCase
             [' Joãozinho  da Silva', 'Joãozinho'],
             [' joãozinho da Silva', 'Joãozinho'],
             [' Maria vitoria de Alencar', 'Maria Vitoria'],
+            ["Everaldo da costa Filho", "Everaldo"],
+            ["Maria Eduarda Costa", "Maria Eduarda"],
+            [" Jubileu Silva de Alencar", "Jubileu"],
+            ["lucas brabo de souza", "Lucas"],
+            [" Victor  hugo", "Victor Hugo"],
+            ["maria clara silva", "Maria Clara"],
+            ["   ", null],
+            ["", null],
+            ["téo de alencar", "Téo"]
         ];
     }
 }
