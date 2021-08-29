@@ -1,7 +1,10 @@
-[![Laravel](https://github.com/everaldofilho/tdd-with-laravel/actions/workflows/tests.yml/badge.svg)](https://github.com/everaldofilho/tdd-with-laravel/actions/workflows/tests.yml)
-[![codecov](https://codecov.io/gh/everaldofilho/tdd-with-laravel/branch/main/graph/badge.svg)](https://codecov.io/gh/everaldofilho/tdd-with-laravel)
 
-# Para que esta abrindo essa essa PR
+# Preencha todas as informações antes de passar a PR para frente :)
+
+## Situação do projeto:
+
+[![Laravel](https://github.com/everaldofilho/tdd-with-laravel/actions/workflows/tests.yml/badge.svg)](https://github.com/everaldofilho/tdd-with-laravel/actions/workflows/tests.yml) [![codecov](https://codecov.io/gh/everaldofilho/tdd-with-laravel/branch/main/graph/badge.svg)](https://codecov.io/gh/everaldofilho/tdd-with-laravel)
+
 
 
 
